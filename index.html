@@ -1,117 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>C-N-M Vending LLC | Your Snacks. Your Choice. Your Machine.</title>
-  <style>
-    :root {
-      --bg: #fffaf0;
-      --ink: #1e293b;
-      --muted: #475569;
-      --panel: #ffffff;
-      --line: rgba(0, 0, 0, .1);
-      --brand: #fbbf24;
-      --accent: #2563eb;
-      --radius: 20px;
-      --shadow: 0 8px 20px rgba(0, 0, 0, .08);
-      --max: 1100px;
-    }
-    * { box-sizing: border-box }
-    html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, Segoe UI, Roboto, Arial }
-    header {
-      background: #fff;
-      border-bottom: 3px solid var(--brand);
-      padding: 12px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo { display: flex; align-items: center; gap: 10px; }
-    .logo img { height: 48px; width: 48px; object-fit: contain; border-radius: 8px; }
-    nav a { margin: 0 8px; color: var(--ink); text-decoration: none; font-weight: 600; }
-    nav a:hover { color: var(--accent); }
-    section { max-width: var(--max); margin: 40px auto; padding: 0 18px; }
-    h1, h2, h3 { color: var(--accent); }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
-    .muted { color: var(--muted); }
-    iframe.embed { width: 100%; aspect-ratio: 16/12; border: 0; border-radius: 14px; background: #fff; }
-    footer { text-align: center; padding: 20px; background: var(--brand); color: #002; }
-    a { color: #0ea5e9; text-decoration: none; }
-  </style>
-</head>
-<body>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>C‑N‑M Vending LLC | Snacks that Spark Joy</title>
+<meta name="description" content="C‑N‑M Vending LLC — bright, friendly vending with contactless pay and a menu you help pick. Tell us what you're craving or request a machine!" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+/* Happy, candy‑store palette */
+--bg1:#fff6e6; /* peachy */
+--bg2:#e6f9ff; /* sky tint */
+--ink:#0f172a;
+--muted:#475569;
+--card:#ffffff;
+--line:rgba(0,0,0,.08);
+--brand:#ffb703; /* sunshine gold */
+--brand2:#00d2ff; /* sky blue */
+--accent:#ff5ca8; /* bubblegum pink */
+--ok:#22c55e;
+--radius:22px;
+--shadow:0 14px 30px rgba(0,0,0,.08);
+--max:1100px;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font:16px/1.7 Nunito, system-ui, -apple-system, Segoe UI, Roboto, Arial; color:var(--ink);
+background: radial-gradient(1200px 600px at -10% -10%, var(--bg1), transparent 60%),
+radial-gradient(900px 500px at 110% 10%, var(--bg2), transparent 60%),
+#fff;}
+h1,h2,h3{font-family:Poppins, Nunito, system-ui; letter-spacing:.2px}
+h1{font-weight:800}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);
+border-bottom:2px solid var(--brand)}
+.nav{max-width:var(--max);margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;object-fit:contain;border-radius:14px;box-shadow:0 6px 14px rgba(0,0,0,.08)}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#062331;font-weight:800}
+.links a{font-weight:700;color:#0b1b31;text-decoration:none;padding:10px 12px;border-radius:12px}
+.links a:hover{background:rgba(0,0,0,.05)}
+.links .btn{background:linear-gradient(135deg,var(--accent),var(--brand));color:#2a0a17}
 
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="C-N-M Vending LLC logo" />
-    <strong>C-N-M Vending LLC</strong>
-  </div>
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#host">Get a Machine</a>
-    <a href="#suggest">Suggest a Snack</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
 
-<main>
+.hero{max-width:var(--max);margin:28px auto;padding:0 18px;display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:center}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.panel{padding:26px}
+.lead{color:#334155;font-size:18px}
+.cta{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:16px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#062331;font-weight:800;border:0;cursor:pointer}
+.btn.alt{background:#fff;color:#0b1b31;border:2px solid var(--accent)}
 
-  <section id="products">
-    <h2>Popular Products</h2>
-    <div class="grid">
-      <div class="card"><h3>Snacks</h3><p class="muted">Chips • Pretzels • Popcorn • Cookies • Nuts • Protein Bars</p></div>
-      <div class="card"><h3>Drinks</h3><p class="muted">Water • Soda • Juice • Energy Drinks • Cold Brew</p></div>
-      <div class="card"><h3>Healthy Options</h3><p class="muted">Low-sugar • Gluten-free • Protein-packed • Fresh Selections</p></div>
-    </div>
-  </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <div class="card">
-      <p>C-N-M Vending LLC is a family-owned Florida business dedicated to offering clean, dependable vending solutions customized to your space. Our team keeps your machines stocked, spotless, and full of the snacks people actually crave.</p>
-    </div>
-  </section>
+section{max-width:var(--max);margin:38px auto;padding:0 18px}
 
-  <section id="host">
-    <h2>Request a Vending Machine</h2>
-    <div class="card">
-      <p>Want a vending machine at your business, gym, school, or apartment? We install and service at no upfront cost. Fill out the quick form below and we’ll contact you soon!</p>
-      <iframe class="embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdIeR0N5qLjqJpWbbzGjguPePsLCs1exf1PhPgtGJSpbnrLcA/viewform?embedded=true" title="Request a Vending Machine Form" loading="lazy"></iframe>
-    </div>
-  </section>
 
-  <section id="suggest">
-    <h2>Tell Us What You’re Craving</h2>
-    <div class="card">
-      <p>Use the form below to suggest snacks or drinks you’d like to see stocked. We review all submissions weekly!</p>
-      <iframe class="embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdyU_MPj-Oqkyi50ccbMyqUBtDTJ0-KsqUiBrrtDKGoTatgDw/viewform?embedded=true" title="Suggest a Snack Form" loading="lazy"></iframe>
-    </div>
-  </section>
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{padding:18px;border-radius:18px;background:#fff;border:1px dashed var(--line)}
+.tile h3{margin:0 0 6px}
+.muted{color:var(--muted)}
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="card">
-      <p><strong>Phone:</strong> <a href="tel:13214627346">321-462-7346</a></p>
-      <p><strong>Email:</strong> <a href="mailto:cnmvendingllc25@gmail.com">cnmvendingllc25@gmail.com</a></p>
-      <p class="muted">We respect your privacy — no physical address displayed online.</p>
-    </div>
-  </section>
 
-</main>
+.ribbon{display:inline-block;padding:8px 12px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--brand));color:#2a0a17;font-weight:800}
 
-<footer>
-  <p>© <span id="year"></span> C-N-M Vending LLC • All Rights Reserved</p>
-</footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+iframe.embed{width:100%;border:0;border-radius:16px;min-height:1000px;background:#fff}
 
-</body>
-</html>
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mini{padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+
+
+footer{margin-top:60px;border-top:2px solid var(--brand);background:linear-gradient(135deg,#fff,var(--bg2))}
+.foot{max-width:var(--max);margin:auto;padding:22px 18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;color:#334155}
+
