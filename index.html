@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C-N-M Vending LLC | Your Snacks. Your Choice. Your Machine.</title>
+  <style>
+    :root {
+      --bg: #fffaf0;
+      --ink: #1e293b;
+      --muted: #475569;
+      --panel: #ffffff;
+      --line: rgba(0, 0, 0, .1);
+      --brand: #fbbf24;
+      --accent: #2563eb;
+      --radius: 20px;
+      --shadow: 0 8px 20px rgba(0, 0, 0, .08);
+      --max: 1100px;
+    }
+    * { box-sizing: border-box }
+    html, body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 system-ui, Segoe UI, Roboto, Arial }
+    header {
+      background: #fff;
+      border-bottom: 3px solid var(--brand);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo img { height: 48px; width: 48px; object-fit: contain; border-radius: 8px; }
+    nav a { margin: 0 8px; color: var(--ink); text-decoration: none; font-weight: 600; }
+    nav a:hover { color: var(--accent); }
+    section { max-width: var(--max); margin: 40px auto; padding: 0 18px; }
+    h1, h2, h3 { color: var(--accent); }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .muted { color: var(--muted); }
+    iframe.embed { width: 100%; aspect-ratio: 16/12; border: 0; border-radius: 14px; background: #fff; }
+    footer { text-align: center; padding: 20px; background: var(--brand); color: #002; }
+    a { color: #0ea5e9; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="C-N-M Vending LLC logo" />
+    <strong>C-N-M Vending LLC</strong>
+  </div>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#host">Get a Machine</a>
+    <a href="#suggest">Suggest a Snack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="products">
+    <h2>Popular Products</h2>
+    <div class="grid">
+      <div class="card"><h3>Snacks</h3><p class="muted">Chips • Pretzels • Popcorn • Cookies • Nuts • Protein Bars</p></div>
+      <div class="card"><h3>Drinks</h3><p class="muted">Water • Soda • Juice • Energy Drinks • Cold Brew</p></div>
+      <div class="card"><h3>Healthy Options</h3><p class="muted">Low-sugar • Gluten-free • Protein-packed • Fresh Selections</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <div class="card">
+      <p>C-N-M Vending LLC is a family-owned Florida business dedicated to offering clean, dependable vending solutions customized to your space. Our team keeps your machines stocked, spotless, and full of the snacks people actually crave.</p>
+    </div>
+  </section>
+
+  <section id="host">
+    <h2>Request a Vending Machine</h2>
+    <div class="card">
+      <p>Want a vending machine at your business, gym, school, or apartment? We install and service at no upfront cost. Fill out the quick form below and we’ll contact you soon!</p>
+      <iframe class="embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdIeR0N5qLjqJpWbbzGjguPePsLCs1exf1PhPgtGJSpbnrLcA/viewform?embedded=true" title="Request a Vending Machine Form" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="suggest">
+    <h2>Tell Us What You’re Craving</h2>
+    <div class="card">
+      <p>Use the form below to suggest snacks or drinks you’d like to see stocked. We review all submissions weekly!</p>
+      <iframe class="embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdyU_MPj-Oqkyi50ccbMyqUBtDTJ0-KsqUiBrrtDKGoTatgDw/viewform?embedded=true" title="Suggest a Snack Form" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="card">
+      <p><strong>Phone:</strong> <a href="tel:13214627346">321-462-7346</a></p>
+      <p><strong>Email:</strong> <a href="mailto:cnmvendingllc25@gmail.com">cnmvendingllc25@gmail.com</a></p>
+      <p class="muted">We respect your privacy — no physical address displayed online.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> C-N-M Vending LLC • All Rights Reserved</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
